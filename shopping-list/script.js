@@ -1,52 +1,77 @@
-function createIcon(classes) {
-  const icon = document.createElement("i");
-  icon.className = classes;
-  return icon;
+
+function replaceFirstItem() {
+  const firstItem = document.querySelector('li')
+  const li = document.createElement('li')
+  li.textContent = 'Replace First'
+
+  firstItem.replaceWith(li)
 }
 
-function createButton(classes) {
-  const button = document.createElement("button");
-  button.className = classes;
-  const icon = createIcon("fa-solid fa-xmark");
-  button.appendChild(icon);
-  return button;
+function replaceSecondItem() {
+  const secondItem = document.querySelector('li:nth-child(2)')
+  secondItem.outerHTML = '<li>Replaced Second</li>'
 }
 
-function createNewItem(item) {
-  const li = document.createElement("li");
-  li.appendChild(document.createTextNode(item));
-
-  const button = createButton("remove-item btn-link text-red");
-  li.appendChild(button);
-
-  const items = document.querySelector(".items");
-  items.appendChild(li);
+function replaceAllItems() {
+  const items = document.querySelectorAll('li')
+  items.forEach(function (item) {
+    item.outerHTML = '<li>Replaced All items</li>'
+  })
 }
 
-function insertBeforeItem() {
-  const ul = document.querySelector("ul");
+replaceSecondItem()
+replaceFirstItem()
+replaceAllItems()
 
-  const li = document.createElement("li");
-  li.appendChild(document.createTextNode("InsertBefore"));
+// function createIcon(classes) {
+//   const icon = document.createElement("i");
+//   icon.className = classes;
+//   return icon;
+// }
 
-  const item = document.querySelector("li:nth-child(3)");
+// function createButton(classes) {
+//   const button = document.createElement("button");
+//   button.className = classes;
+//   const icon = createIcon("fa-solid fa-xmark");
+//   button.appendChild(icon);
+//   return button;
+// }
 
-  ul.insertBefore(li, item);
-}
+// function createNewItem(item) {
+//   const li = document.createElement("li");
+//   li.appendChild(document.createTextNode(item));
 
-function insertAfter(item, positionElement) {
-  positionElement.parentElement.insertBefore(
-    item,
-    positionElement.nextElementSibling,
-  );
-}
+//   const button = createButton("remove-item btn-link text-red");
+//   li.appendChild(button);
 
-const li = document.createElement("li");
-li.textContent = "Insert Me After";
+//   const items = document.querySelector(".items");
+//   items.appendChild(li);
+// }
 
-const firstItem = document.querySelector("li:first-child");
+// function insertBeforeItem() {
+//   const ul = document.querySelector("ul");
 
-insertAfter(li, firstItem);
+//   const li = document.createElement("li");
+//   li.appendChild(document.createTextNode("InsertBefore"));
+
+//   const item = document.querySelector("li:nth-child(3)");
+
+//   ul.insertBefore(li, item);
+// }
+
+// function insertAfter(item, positionElement) {
+//   positionElement.parentElement.insertBefore(
+//     item,
+//     positionElement.nextElementSibling,
+//   );
+// }
+
+// const li = document.createElement("li");
+// li.textContent = "Insert Me After";
+
+// const firstItem = document.querySelector("li:first-child");
+
+// insertAfter(li, firstItem);
 
 // createNewItem("eggs");
 // createNewItem("PS5");
