@@ -1,28 +1,40 @@
-
 function replaceFirstItem() {
-  const firstItem = document.querySelector('li')
-  const li = document.createElement('li')
-  li.textContent = 'Replace First'
+  const firstItem = document.querySelector("li");
+  const li = document.createElement("li");
+  li.textContent = "Replace First";
 
-  firstItem.replaceWith(li)
+  firstItem.replaceWith(li);
 }
 
 function replaceSecondItem() {
-  const secondItem = document.querySelector('li:nth-child(2)')
-  secondItem.outerHTML = '<li>Replaced Second</li>'
+  const secondItem = document.querySelector("li:nth-child(2)");
+  secondItem.outerHTML = "<li>Replaced Second</li>";
 }
 
 function replaceAllItems() {
-  const items = document.querySelectorAll('li')
-  items.forEach(function (item) {
-    item.outerHTML = '<li>Replaced All items</li>'
-  })
+  const items = document.querySelectorAll("li");
+  items.forEach((item) => {
+    item.innerHTML = "Replaced All items";
+  });
 }
 
-replaceSecondItem()
-replaceFirstItem()
-replaceAllItems()
+function replaceChildHeading() {
+  const header = document.querySelector("header");
+  const h1 = document.querySelector("header h1");
+  const h2 = document.createElement("h2");
+  h2.id = "app-title";
+  h2.textContent = "Shopping List";
+  header.replaceChild(h2, h1);
+}
 
+const removeItem = (itemNumber) => document.querySelectorAll('li')[itemNumber - 1].remove()
+
+removeItem(1)
+
+// replaceSecondItem();
+// replaceFirstItem();
+// replaceAllItems();
+// replaceChildHeading();
 // function createIcon(classes) {
 //   const icon = document.createElement("i");
 //   icon.className = classes;
