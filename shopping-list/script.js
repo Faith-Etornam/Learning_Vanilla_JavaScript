@@ -17,7 +17,6 @@ function createNewItem(item) {
   li.appendChild(document.createTextNode(item));
 
   const button = createButton("remove-item btn-link text-red");
-
   li.appendChild(button);
 
   const items = document.querySelector(".items");
@@ -35,11 +34,25 @@ function insertBeforeItem() {
   ul.insertBefore(li, item);
 }
 
-createNewItem("eggs");
-createNewItem("PS5");
-createNewItem("GTA V");
+function insertAfter(item, positionElement) {
+  positionElement.parentElement.insertBefore(
+    item,
+    positionElement.nextElementSibling,
+  );
+}
 
-insertBeforeItem();
+const li = document.createElement("li");
+li.textContent = "Insert Me After";
+
+const firstItem = document.querySelector("li:first-child");
+
+insertAfter(li, firstItem);
+
+// createNewItem("eggs");
+// createNewItem("PS5");
+// createNewItem("GTA V");
+
+// insertBeforeItem();
 
 // const itemForm = document.getElementById('item-form');
 // const itemInput = document.getElementById('item-input');
