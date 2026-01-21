@@ -1,13 +1,15 @@
-function createButton(classes) {
-  const button = document.createElement("button");
-  button.className = classes;
-  return button;
-}
-
 function createIcon(classes) {
   const icon = document.createElement("i");
   icon.className = classes;
   return icon;
+}
+
+function createButton(classes) {
+  const button = document.createElement("button");
+  button.className = classes;
+  const icon = createIcon("fa-solid fa-xmark");
+  button.appendChild(icon);
+  return button;
 }
 
 function createNewItem(item) {
@@ -15,16 +17,29 @@ function createNewItem(item) {
   li.appendChild(document.createTextNode(item));
 
   const button = createButton("remove-item btn-link text-red");
-  const icon = createIcon("fa-solid fa-xmark");
 
-  button.appendChild(icon);
   li.appendChild(button);
 
   const items = document.querySelector(".items");
   items.appendChild(li);
 }
 
+function insertBeforeItem() {
+  const ul = document.querySelector("ul");
+
+  const li = document.createElement("li");
+  li.appendChild(document.createTextNode("InsertBefore"));
+
+  const item = document.querySelector("li:nth-child(3)");
+
+  ul.insertBefore(li, item);
+}
+
 createNewItem("eggs");
+createNewItem("PS5");
+createNewItem("GTA V");
+
+insertBeforeItem();
 
 // const itemForm = document.getElementById('item-form');
 // const itemInput = document.getElementById('item-input');
