@@ -1,35 +1,37 @@
-function replaceFirstItem() {
-  const firstItem = document.querySelector("li");
-  const li = document.createElement("li");
-  li.textContent = "Replace First";
 
-  firstItem.replaceWith(li);
-}
 
-function replaceSecondItem() {
-  const secondItem = document.querySelector("li:nth-child(2)");
-  secondItem.outerHTML = "<li>Replaced Second</li>";
-}
+// function replaceFirstItem() {
+//   const firstItem = document.querySelector("li");
+//   const li = document.createElement("li");
+//   li.textContent = "Replace First";
 
-function replaceAllItems() {
-  const items = document.querySelectorAll("li");
-  items.forEach((item) => {
-    item.innerHTML = "Replaced All items";
-  });
-}
+//   firstItem.replaceWith(li);
+// }
 
-function replaceChildHeading() {
-  const header = document.querySelector("header");
-  const h1 = document.querySelector("header h1");
-  const h2 = document.createElement("h2");
-  h2.id = "app-title";
-  h2.textContent = "Shopping List";
-  header.replaceChild(h2, h1);
-}
+// function replaceSecondItem() {
+//   const secondItem = document.querySelector("li:nth-child(2)");
+//   secondItem.outerHTML = "<li>Replaced Second</li>";
+// }
 
-const removeItem = (itemNumber) => document.querySelectorAll('li')[itemNumber - 1].remove()
+// function replaceAllItems() {
+//   const items = document.querySelectorAll("li");
+//   items.forEach((item) => {
+//     item.innerHTML = "Replaced All items";
+//   });
+// }
 
-removeItem(1)
+// function replaceChildHeading() {
+//   const header = document.querySelector("header");
+//   const h1 = document.querySelector("header h1");
+//   const h2 = document.createElement("h2");
+//   h2.id = "app-title";
+//   h2.textContent = "Shopping List";
+//   header.replaceChild(h2, h1);
+// }
+
+// const removeItem = (itemNumber) => document.querySelectorAll('li')[itemNumber - 1].remove()
+
+// removeItem(1)
 
 // replaceSecondItem();
 // replaceFirstItem();
