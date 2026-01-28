@@ -3,7 +3,7 @@ window.addEventListener("keypress", (event) => {
   insert.innerHTML = "";
 
   const keyCodes = {
-    "event.key": event.key === ' ' ? 'Space': event.key,
+    "event.key": event.key === " " ? "Space" : event.key,
     "event.keyCode": event.keyCode,
     "event.code": event.code,
   };
@@ -11,11 +11,14 @@ window.addEventListener("keypress", (event) => {
   for (let key in keyCodes) {
     const div = document.createElement("div");
     div.className = "key";
+
     const value = document.createTextNode(keyCodes[key]);
     div.appendChild(value);
+
     const small = document.createElement("small");
-    const textValue = document.createTextNode(key);
-    small.appendChild(textValue);
+    const keyValue = document.createTextNode(key);
+    small.appendChild(keyValue);
+
     insert.appendChild(div);
   }
 });
