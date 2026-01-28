@@ -1,14 +1,27 @@
-const input = document.querySelector("#item-input");
+const itemInput = document.querySelector('#item-input')
+const selectList = document.querySelector('#select-items')
+const checkbox = document.querySelector('#checkbox')
+const heading = document.querySelector('h1')
 
-const h1 = document.querySelector("h1");
+// itemInput.addEventListener('input', (event) => {
+//   heading.textContent = event.target.value
+// })
+selectList.addEventListener('input', (event) => {
+  heading.textContent = event.target.value
+})
 
-input.addEventListener("keypress", (event) => {
-  if (!input.value) {
-    h1.innerText = event.key;
-  } else {
-    h1.innerText += event.key;
-  }
-});
+
+// const input = document.querySelector("#item-input");
+
+// const h1 = document.querySelector("h1");
+
+// input.addEventListener("keypress", (event) => {
+//   if (!input.value) {
+//     h1.innerText = event.key;
+//   } else {
+//     h1.innerText += event.key;
+//   }
+// });
 
 // const logo = document.querySelector('img')
 
