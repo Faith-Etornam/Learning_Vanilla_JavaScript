@@ -1,4 +1,50 @@
+const input = document.querySelector("#item-input");
 
+const h1 = document.querySelector("h1");
+
+input.addEventListener("keypress", (event) => {
+  if (!input.value) {
+    h1.innerText = event.key;
+  } else {
+    h1.innerText += event.key;
+  }
+});
+
+// const logo = document.querySelector('img')
+
+// const onClick = () => console.log('click event')
+
+// logo.addEventListener('dblclick', onClick)
+// hello()
+
+// function hello() {
+//     console.log('Hello')
+// }
+
+// hello2()
+
+// const hello2 = function () {
+//     console.log('Hello 2')
+// }
+// hello3()
+
+// const hello3 = () => {
+//     console.log('Hello 3')
+// }
+
+// const clearBtn = document.querySelector("#clear");
+
+// const itemList = document.querySelector("ul");
+
+// function onClear() {
+//   while (itemList.firstElementChild) {
+//     itemList.firstElementChild.remove();
+//   }
+// }
+
+// clearBtn.addEventListener("click", onClear);
+
+// clearBtn.addEventListener("click", () => alert("Clear Items"));
 
 // function replaceFirstItem() {
 //   const firstItem = document.querySelector("li");
