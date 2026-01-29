@@ -1,5 +1,24 @@
 
 
+
+// const listItems = document.querySelectorAll("li");
+// const list = document.querySelector("ul");
+
+// list.addEventListener("mouseover", (e) => {
+//   document.body.style.backgroundColor = 'skyblue'
+//   document.body.style.color = 'white'
+// });
+// list.addEventListener("mouseleave", (e) => {
+//   document.body.style.backgroundColor = 'white'
+//   document.body.style.color = 'black'
+// });
+
+// listItems.forEach(item => {
+//   item.addEventListener('click', (e) => {
+//     e.target.remove()
+//   })
+// })
+
 // const form = document.getElementById('item-form')
 
 // form.addEventListener('submit', (event) => {
@@ -10,13 +29,12 @@
 //   const formData = new FormData(form)
 
 //   const entries = formData.entries()
-  
+
 //   for (let entry of entries) {
 //     console.log(entry[1])
 //   }
 
 // })
-
 
 // const itemInput = document.querySelector("#item-input");
 // const selectList = document.querySelector("#select-items");
