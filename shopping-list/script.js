@@ -1,28 +1,48 @@
-const itemInput = document.querySelector("#item-input");
-const selectList = document.querySelector("#select-items");
-const checkbox = document.querySelector("#checkbox");
-const heading = document.querySelector("h1");
 
-// itemInput.addEventListener('input', (event) => {
-//   heading.textContent = event.target.value
+
+// const form = document.getElementById('item-form')
+
+// form.addEventListener('submit', (event) => {
+//   event.preventDefault()
+//   const item = document.querySelector('#item-input')
+//   const selectList = document.querySelector('#select-items')
+
+//   const formData = new FormData(form)
+
+//   const entries = formData.entries()
+  
+//   for (let entry of entries) {
+//     console.log(entry[1])
+//   }
+
 // })
-selectList.addEventListener("input", (event) => {
-  heading.textContent = event.target.value;
-});
 
-checkbox.addEventListener("input", (event) => {
-  console.log(event.target.checked);
-});
 
-itemInput.addEventListener("focus", () => {
-  itemInput.style.outlineStyle = "solid";
-  itemInput.style.outlineWidth = "1px";
-  itemInput.style.outlineColor = "red";
-});
+// const itemInput = document.querySelector("#item-input");
+// const selectList = document.querySelector("#select-items");
+// const checkbox = document.querySelector("#checkbox");
+// const heading = document.querySelector("h1");
 
-itemInput.addEventListener("blur", () => {
-  itemInput.style.outlineStyle = "none";
-});
+// // itemInput.addEventListener('input', (event) => {
+// //   heading.textContent = event.target.value
+// // })
+// selectList.addEventListener("input", (event) => {
+//   heading.textContent = event.target.value;
+// });
+
+// checkbox.addEventListener("input", (event) => {
+//   console.log(event.target.checked);
+// });
+
+// itemInput.addEventListener("focus", () => {
+//   itemInput.style.outlineStyle = "solid";
+//   itemInput.style.outlineWidth = "1px";
+//   itemInput.style.outlineColor = "red";
+// });
+
+// itemInput.addEventListener("blur", () => {
+//   itemInput.style.outlineStyle = "none";
+// });
 
 // const input = document.querySelector("#item-input");
 
